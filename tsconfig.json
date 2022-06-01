@@ -1,8 +1,8 @@
 {
-  "strict": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "compilerOptions": {
+   "strict": true,
+   "noUnusedLocals": true,
+   "noUnusedParameters": true,
+   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
