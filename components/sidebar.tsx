@@ -10,14 +10,14 @@ import {
   Divider,
   Center,
   LinkBox,
-  LinkOverlay,
+  LinkOverlay
 } from "@chakra-ui/layout";
 import {
   MdHome,
   MdSearch,
   MdLibraryMusic,
   MdPlaylistAdd,
-  MdFavorite,
+  MdFavorite
 } from "react-icons/md";
 
 const navMenu = [
