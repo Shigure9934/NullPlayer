@@ -1,6 +1,5 @@
 import NextLink from "next/link";
 import React from "react";
-import { Router, RouteComponentProps } from "@reach/router";
 import { useRouter } from "next/router";
 import NextImage from "next/image";
 import {
