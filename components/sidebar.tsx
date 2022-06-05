@@ -30,11 +30,24 @@ const navMenu = [
     name: "Search",
     icon: MdSearch,
     href: "/search",
-  },
+  }, 
   {
     name: "Library",
     icon: MdLibraryMusic,
     href: "/library",
+  },
+]
+
+const musicMenu = [
+  {
+    name: "Create Playlist",
+    icon: MdPlaylistAdd,
+    href: "/",
+  },
+  {
+    name: "Favorites",
+    icon: MdFavorite,
+    href: "/favorites",
   },
 ]
 
@@ -48,8 +61,10 @@ const Sidebar = () => {
       color="gray"
     >
       <Box paddingY="20px">
-        <Box width="120px" marginBottom="20px" paddingX="20px">
-          <NextImage src="/logo.png" width={120} height={120} />
+        <Box width="120px" marginBottom="px" paddingX="20px">
+          <Box paddingBottom="20px">
+            ヌルプレイ
+          </Box>
         </Box>
         <Box marginBottom="20px">
           <List spacing={2}>
@@ -69,6 +84,27 @@ const Sidebar = () => {
                 </LinkBox>
               </ListItem>
             ))}
+          </List>
+        </Box>
+        <Divider color="gray.800"/>
+        <Box marginTop="20px">
+          <List spacing={2}>
+          {musicMenu.map(menu => (
+            <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
+               <LinkBox>
+                  <NextLink href={menu} passHref>
+                    <LinkOverlay>
+                      <ListIcon
+                        as={menu.icon}
+                        color="white"
+                        marginRight="20px"
+                      />
+                      {menu.name}
+                    </LinkOverlay>
+                  </NextLink>
+                </LinkBox>
+          </ListItem>
+        ))}
           </List>
         </Box>
       </Box>
